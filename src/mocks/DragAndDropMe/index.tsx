@@ -1,5 +1,4 @@
 // libs
-import React from 'react';
 import * as fs from 'fs';
 import { Button } from '@material-ui/core';
 // others

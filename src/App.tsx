@@ -1,21 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import DragAndDropMe from './mocks/DragAndDropMe';
+// libs
+import { Suspense } from 'react';
+import { HashRouter, Route, Switch } from 'react-router-dom';
+// routes
+import mainRoutes from '@/routers/mainRoutes';
+// components
+import AppLayout from '@/components/layout';
+import RecursiveRender from '@/tools/renderer/RecursiveRender';
 
-const Hello = () => {
-  return (
-    <div>
-      <DragAndDropMe />
-    </div>
-  );
-};
-
+/**
+ * App
+ */
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" component={Hello} />
-      </Switch>
-    </Router>
+    <RecursiveRender
+      structure={[
+        [HashRouter, {}],
+        [Suspense, { fallback: 'Suspensed' }],
+        [AppLayout, {}],
+        [Switch, {}],
+      ]}
+    >
+      {mainRoutes.map((route) => (
+        <Route
+          key={route.path}
+          path={route.path}
+          exact={route.exact}
+          component={route.component}
+        />
+      ))}
+    </RecursiveRender>
   );
 }
