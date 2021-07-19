@@ -1,4 +1,4 @@
-import { makeCSS } from '@/utils/common/css';
+import { makeCSS } from '@/tools/css';
 
 export const useCSS = makeCSS('DragAndDrop', () => ({
   root: {

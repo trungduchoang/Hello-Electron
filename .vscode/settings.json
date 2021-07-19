@@ -24,5 +24,22 @@
     "test/**/__snapshots__": true,
     "yarn.lock": true,
     "*.d.ts": true
-  }
+  },
+  "todohighlight.keywords": [
+    {
+      "text": "Reference:",
+      "color": "#333",
+      "backgroundColor": "#aef5fe"
+    }
+  ],
+
+  "eslint.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": { "source.fixAll": true },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
 }

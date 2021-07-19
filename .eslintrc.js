@@ -1,14 +1,18 @@
 module.exports = {
   rules: {
-    'import/no-extraneous-dependencies': 'off',
-    'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
+    '@typescript-eslint/ban-types': 0,
+    'react/react-in-jsx-scope': 0,
+    'react/jsx-props-no-spreading': 0,
+    '@typescript-eslint/no-explicit-any': 0,
   },
   overrides: [
     {
-      files: ['**/src/utils/common/css/**'],
+      files: ['**/src/pages/**'],
       rules: {
+        'react/jsx-props-no-spreading': 2,
         '@typescript-eslint/no-explicit-any': 0,
-        '@typescript-eslint/ban-types': 0,
       },
     },
   ],
