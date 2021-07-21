@@ -1,8 +1,12 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "ES2018",
-    "module": "CommonJS",
-    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "declaration": true,
     "declarationMap": true,
     "noEmit": true,
@@ -10,30 +14,23 @@
     "strict": true,
     "pretty": true,
     "sourceMap": true,
-    /* Additional Checks */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    /* Module Resolution Options */
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["assets/*"]
-    }
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true
   },
   "exclude": [
-    "test",
-    "release",
-    "src/main.prod.js",
-    "src/renderer.prod.js",
-    "src/dist",
-    ".erb/dll",
-    "assets/templates"
+    "test"
+  ],
+  "include": [
+    "src"
   ]
 }
