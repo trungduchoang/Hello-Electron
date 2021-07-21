@@ -1,7 +1,7 @@
 // libs
 import { ReactNode } from 'react';
 // others
-// import { useCSS } from './style';
+import { useStyles } from './style';
 
 type TProps = {
   children: ReactNode;
@@ -11,7 +11,7 @@ type TProps = {
  * @param children
  */
 export default function AppLayout({ children }: TProps) {
-  // const classes = useCSS();
+  const classes = useStyles();
 
-  return <div>{children}</div>;
+  return <div className={classes.root}>{children}</div>;
 }

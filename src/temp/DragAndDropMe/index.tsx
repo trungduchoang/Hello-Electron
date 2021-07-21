@@ -2,10 +2,10 @@
 import * as fs from 'fs';
 import { Button } from '@material-ui/core';
 // others
-import { useCSS } from './style';
+import { useStyles } from './style';
 
 export default function DragAndDropMe() {
-  const classes = useCSS();
+  const classes = useStyles();
   return (
     <Button
       className={classes.root}

@@ -1,5 +1,5 @@
 // components
-import DragAndDropMe from '@/mocks/DragAndDropMe';
+import DragAndDropMe from '@/temp/DragAndDropMe';
 
 /**
  * Home
