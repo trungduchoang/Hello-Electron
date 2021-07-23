@@ -1,6 +1,7 @@
 // libs
-import { getCookie } from "@/utils/storage";
 import { useState, useEffect } from "react";
+// others
+import { getCookie } from "@/utils/storage";
 
 /**
  * useCookie

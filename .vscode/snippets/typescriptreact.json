@@ -1,0 +1,27 @@
+{
+  "_importStyle": {
+    "prefix": "_importStyle",
+    "body": ["// others", "import { useStyles } from './style';"],
+    "description": "Import StyleSheet"
+  },
+  "_useStyle": {
+    "prefix": "_useStyle",
+    "body": ["const classes = useStyles();"],
+    "description": "Use StyleSheet"
+  },
+  "_className": {
+    "prefix": "_className",
+    "body": ["className={classes$1}"],
+    "description": "Add className property"
+  },
+  "_useAlert": {
+    "prefix": "_useAlert",
+    "body": ["const { alert } = useAlert();"],
+    "description": "useAlert"
+  },
+  "_useConfirm": {
+    "prefix": "_useConfirm",
+    "body": ["const confirm = useConfirm();"],
+    "description": "useConfirm"
+  }
+}

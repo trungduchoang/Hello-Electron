@@ -1,5 +1,5 @@
 // components
-import DragAndDropMe from '@/temp/DragAndDropMe';
+import InitProjectBtn from './components/atoms/InitProjectBtn';
 
 /**
  * Home
@@ -7,7 +7,7 @@ import DragAndDropMe from '@/temp/DragAndDropMe';
 export default function Home() {
   return (
     <>
-      <DragAndDropMe />
+      <InitProjectBtn />
     </>
   );
 }

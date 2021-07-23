@@ -1,4 +1,4 @@
-import { buildStyles } from "@/tools/css";
+import { buildStyles } from "@/utils/css";
 
 export const useStyles = buildStyles("AppLayout", () => ({
   root: {

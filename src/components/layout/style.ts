@@ -1,4 +1,4 @@
-import { makeCSS } from '@/tools/css';
+import { makeCSS } from '@/utils/css';
 
 export const useStyles = makeCSS('AppLayout', () => ({
   root: {
