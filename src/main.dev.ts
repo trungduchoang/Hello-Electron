@@ -14,6 +14,7 @@ import path from 'path';
 import { app, BrowserWindow, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
+import windowStateKeeper from 'electron-window-state';
 import MenuBuilder from './menu';
 
 export default class AppUpdater {
@@ -59,6 +60,11 @@ const createWindow = async () => {
     await installExtensions();
   }
 
+  const windowSizePersister = windowStateKeeper({
+    defaultWidth: 1000,
+    defaultHeight: 800,
+  });
+
   const RESOURCES_PATH = app.isPackaged
     ? path.join(process.resourcesPath, 'assets')
     : path.join(__dirname, '../assets');
@@ -68,8 +74,10 @@ const createWindow = async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
-    height: 728,
+    x: windowSizePersister.x,
+    y: windowSizePersister.y,
+    width: windowSizePersister.width,
+    height: windowSizePersister.height,
     icon: getAssetPath('icon.png'),
     webPreferences: {
       nodeIntegration: true,
@@ -77,6 +85,8 @@ const createWindow = async () => {
       enableRemoteModule: true,
     },
   });
+
+  windowSizePersister.manage(mainWindow);
 
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 

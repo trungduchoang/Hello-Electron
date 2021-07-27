@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { SnackbarProvider as AlertUIProvider } from 'notistack';
 import { ConfirmProvider as ConfirmUIProvider } from 'material-ui-confirm';
-import { ThemeProvider, CssBaseline } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 // routes
 import mainRoutes from '@/routers/mainRoutes';
 // components
@@ -21,7 +21,6 @@ export default function App() {
       structure={[
         [HashRouter, {}],
         [Suspense, { fallback: 'Suspensed' }],
-        [ThemeProvider, {}],
         [AlertUIProvider, {}],
         [ConfirmUIProvider, { defaultOptions: confirmDefaultOptions }],
         [AppLayout, {}],
