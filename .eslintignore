@@ -50,3 +50,6 @@ __snapshots__
 package.json
 .travis.yml
 assets/templates
+
+#bit
+shared
