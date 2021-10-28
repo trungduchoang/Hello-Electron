@@ -38,7 +38,6 @@ export default {
     modules: [path.join(__dirname, '../../src'), 'node_modules'],
     alias: {
       '@': path.resolve(__dirname, '../../src'),
-      '@assets': path.resolve(__dirname, '../../assets'),
     },
   },
 

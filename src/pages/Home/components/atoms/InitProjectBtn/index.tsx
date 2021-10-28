@@ -6,7 +6,7 @@ import { Button } from '@material-ui/core';
 // hooks
 import { useConfirm } from '@/hooks/views/useConfirm';
 // others
-import { walkThroughDirectory } from '@/utils/fileSystem';
+import { walkThroughDirectory } from '@/utils/system';
 import { useStyles } from './style';
 
 const TEMPLATE_PATH = 'assets/templates';
@@ -30,7 +30,7 @@ export default function DragAndDropMe() {
           ? path.join(process.resourcesPath, TEMPLATE_PATH)
           : path.join(appPath, '../', TEMPLATE_PATH);
         const { filePaths: existedFiles } = await walkThroughDirectory(
-          newProjectPath
+          newProjectPath,
         );
 
         if (existedFiles.length > 0) {

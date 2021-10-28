@@ -1,9 +1,0 @@
-{
-  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
-  "teambit.workspace/workspace": {
-    "name": "rx-express-workspace",
-    "icon": "https://static.bit.dev/bit-logo.svg",
-    "defaultDirectory": "{scope}/{name}",
-    "defaultScope": "rteam.shared"
-  }
-}

@@ -23,9 +23,7 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["assets/*"],
-      "@shared/*": ["shared/*"]
+      "@/*": ["src/*"]
     }
   },
   "exclude": [

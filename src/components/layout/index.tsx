@@ -1,7 +1,9 @@
 // libs
 import { ReactNode } from 'react';
+// components
+import Header from './Header';
 // others
-import { useStyles } from './style';
+import { useStyles } from './styles';
 
 type TProps = {
   children: ReactNode;
@@ -11,7 +13,12 @@ type TProps = {
  * @param children
  */
 export default function AppLayout({ children }: TProps) {
-  const classes = useStyles();
+  const classes = useStyles('AppLayout')();
 
-  return <div className={classes.root}>{children}</div>;
+  return (
+    <div className={classes.root}>
+      <Header />
+      <div className={classes.mainWrapper}>{children}</div>
+    </div>
+  );
 }
